@@ -34,3 +34,13 @@ background-color: chocolate;
 #mainText {
     text-align: center;
 }
+
+#title {
+    text-align: center;
+}
+
+#verticalLine {
+    padding-right:20px;
+    border-right: 1px 
+    solid #ccc;
+}

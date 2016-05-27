@@ -107,5 +107,17 @@
 });
 
 
+var resizeTimer;
+
+$(window).resize( function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        // Run code here, resizing has "stopped
+        // blow it all away
+        d3.selectAll("#piechart svg").remove();
+        doAllTheGraph();
+  }, 250); // end timeout func
+});
+
 
 

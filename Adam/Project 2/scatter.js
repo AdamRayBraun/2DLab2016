@@ -6,11 +6,11 @@ function type(d) {
   return d;
 }
 
-function doAllTheGraph() {
+function doTheScatterChart() {
     
     var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = $("#scatterchart").width() - margin.left - margin.right,
-    height = $(".chart").height() - margin.top - margin.bottom;
+    height = $("#scatterchart").height() - margin.top - margin.bottom;
 
 var x = d3.scale.linear()
     .range([0, width]);
@@ -28,7 +28,7 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left");
 
-var svg = d3.select("div#scatterchart").append("svg")
+var svg = d3.select("#scatterchart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
@@ -100,7 +100,7 @@ d3.tsv("data.tsv", function(error, data) {
 }
 
 
-doAllTheGraph();
+doTheScatterChart();
 
 
 // two ways to do resizing - resize in place or change it all.
@@ -115,8 +115,8 @@ $(window).resize( function() {
     resizeTimer = setTimeout(function() {
         // Run code here, resizing has "stopped
         // blow it all away
-        d3.selectAll("#scatterchart g").remove();
-        doAllTheGraph();
+        d3.selectAll("#scatterchart svg").remove();
+        doTheScatterChart();
   }, 250); // end timeout func
 });
 
