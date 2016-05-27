@@ -26,3 +26,11 @@ background-color: chocolate;
   stroke: #ccc;
   stroke-width: 2px;
 }
+
+#scatterchart {
+    height:300px;
+}
+
+#mainText {
+    text-align: center;
+}
