@@ -1,5 +1,6 @@
 #mapid {
-    height: 600px;
+    height: 500px;
+    width: $("#mapid").width();
 }
 
 div.coloured-bg {
@@ -29,4 +30,9 @@ div.hh {
  
 .popup img {
     width: 250px;
+}
+
+.leaflet-popup-content-wrapper {
+    background: transparent;
+    text-shadow: 1px 1px 16px #000000;
 }

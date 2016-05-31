@@ -2,11 +2,11 @@ console.log(L);
 
 var mymap = L.map('mapid').setView([51.4556, -0.1108], 12);
 
-L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v8/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+L.tileLayer('https://api.mapbox.com/styles/v1/adambraun/cior850ev000icwlygloju082/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWRhbWJyYXVuIiwiYSI6ImNpbzFnb2ZqbzAweGJ2Zm0ycm1mN3VodmMifQ.RX5uWDGndhLEvx1h_agkuw', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18,
-    id: 'cassieldotcom.lbo5g01j',
-    accessToken: 'pk.eyJ1IjoiY2Fzc2llbGRvdGNvbSIsImEiOiJfOXlpQmFJIn0.W5qn7J_RcOV8502RXsDc3Q'
+    id: 'adambraun.08fa6pjn',
+    accessToken: 'pk.eyJ1IjoiYWRhbWJyYXVuIiwiYSI6ImNpbzFnb2ZqbzAweGJ2Zm0ycm1mN3VodmMifQ.RX5uWDGndhLEvx1h_agkuw'
 }).addTo(mymap);
 
 function jsonFunc(data) {
@@ -23,7 +23,7 @@ function jsonFunc(data) {
 
         
 var mapData = [
-    //{"name": "someone", "position": [50.0, 0.0], "img": 'httpxxxxxx'},
+    //{"name": "someone", "position": [50.0, 0.0], "img": 'xxxxxx.jpg'},
     
     {
         "name": "Gipsy hill underground river marker",
@@ -114,7 +114,7 @@ var line_points1 = [
 ];
 
 var polyline_options = {
-    color: '#090'
+    color: "#0a456a"
 };
 
 var polyline = L.polyline(line_points1, polyline_options).addTo(mymap);

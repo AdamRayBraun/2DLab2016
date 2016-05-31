@@ -28,33 +28,95 @@
 
     <div class="container">
         
+        
       <div class=" col-md-12" id="title">
         <h1>The river Effra</h1>
         <p class=" col-md-12">Adam Ray Braun</p>
       </div>
-        <hr COLOR="blue" size="6">
-    <hr>
+        
+        <hr COLOR="#0a456a" class="col-md-12" size="6">
+        
       <div class="row">
-        <div id="mapid" class="col-md-6"></div>
-        <div id="verticalLine"></div>
-        <div id="oldMaps" class="col-md-6"></div>
-      </div>
+        <div id="mapid" class="col-md-5"></div>
+        <div id="verticalLine" class ="col-md-2"></div>
+        <div id="oldMapButtons" class="col-md-1">
+            <form name='test'>
+                <ul>
+                    <li><input type="radio" name="field" value="one" onclick='check_value(1)'>one </li>
+                <li><input type="radio" name="field" value="two" onclick='check_value(2)'>two </li>
+                <li><input type="radio" name="field" value="three" onclick='check_value(3)'>three </li>
+                <li><input type="radio" name="field" value="four" onclick='check_value(4)'>four </li>
+                <li><input type="radio" name="field" value="five" onclick='check_value(5)'>5 </li>
+                <li><input type="radio" name="field" value="six" onclick='check_value(6)'>six </li>
+                </ul>
+            </form>
+          </div>
+        
+        <div id="oldMapPictures" class="cold-md-4">
+            
+            <script language='JavaScript' type='text/javascript'>
 
-        <hr COLOR="blue" size="6">
+                function check_value(fieldvalue)
+                    {    
+                        switch(fieldvalue)
+                        {
+                            case 1:
+                                document.getElementById("oldMap").innerHTML = "<img src='data/1804.jpg'>";
+                                    break;
+
+                            case 2:
+                                document.getElementById("oldMap").innerHTML = "<img src='data/1809.jpg'>"; 
+                                    break;
+
+                            case 3:
+                                document.getElementById("oldMap").innerHTML = "<img src='data/1970.jpg'>"; 
+                                    break;
+                                
+                            case 4:
+                                document.getElementById("oldMap").innerHTML = "<img src='data/2000.jpg'>"; 
+                                    break;
+                                
+                            case 5:
+                                document.getElementById("oldMap").innerHTML = "<img src='data/2009.jpg'>"; 
+                                    break;
+                                
+                            case 6:
+                                document.getElementById("oldMap").innerHTML = "<img src='data/2013.jpg'>"; 
+                                    break;
+                            
+                        }
+                    }
+
+                </script>
+        <div id='oldMap'></div>
+          </div>
+
+        
+        
+        <hr COLOR="#0a456a" class="col-md-12" size="6">
+        
       <div class="row">
          <h2 class=" col-md-12" id="mainText"> 
-          the river effra is real fancy the river effra is real fancy the river effra is real fancy the river effra is real fancy the river effra is real fancy the river effra is real fancy the river effra is real fancy the river effra is real fancy the river effra is real fancy the river effra is real fancy the river effra is real fancy</h2>
+         mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem mandem 
+         </h2>
       </div>
-        <hr COLOR="blue" size="6">
+        
+        <hr COLOR="#0a456a" class="col-md-12" size="6">
+        
         <div class="row">
           <div id="scatterchart" class=" col-md-5"></div>
-          <div id="verticalLine"></div>
-          <div id="pieChart" class=" col-md-5"></div> 
+          <div id="verticalLine" class="col-md-2">
+          <h3>asdasdasdasasd</h3>
+          </div>
+          <div id="pieChart" class="col-md-5"></div>
       </div>
+        
+        <hr COLOR="#0a456a" class="col-md-12" size="6">
 
+    
+      </div><!-- /.container -->
 
-    </div><!-- /.container -->
-<hr>
+      
 <!--        jquery script-->
     <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
 <!--        bootstrap script-->
@@ -69,7 +131,6 @@
     <script src="barchart.js"></script>
 <!--        scatter chart js-->
     <script src="scatter.js"></script>
-
 <!--       d3 pie chart -->
     <script src="d3pie.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
