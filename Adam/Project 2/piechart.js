@@ -42,7 +42,7 @@
 				"color": "#2f52aa"
 			},
 			{
-				"label": "Physical river markers",
+				"label": "River markers",
 				"value": 2,
 				"color": "#00047c"
 			},

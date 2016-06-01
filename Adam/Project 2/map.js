@@ -9,19 +9,32 @@ L.tileLayer('https://api.mapbox.com/styles/v1/adambraun/cior850ev000icwlygloju08
     accessToken: 'pk.eyJ1IjoiYWRhbWJyYXVuIiwiYSI6ImNpbzFnb2ZqbzAweGJ2Zm0ycm1mN3VodmMifQ.RX5uWDGndhLEvx1h_agkuw'
 }).addTo(mymap);
 
+
+// addds custom brown marker and shadow
+var brownIcon = L.icon({
+    iconUrl: 'data/marker-icon-brown.png',
+    shadowUrl: 'data/marker-icon-brown-shadow.png',
+
+    iconSize:     [20, 60], // size of the icon
+    shadowSize:   [30, 80], // size of the shadow
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [22, 95],  // the same for the shadow
+    popupAnchor:  [-12, -86] // point from which the popup should open relative to the iconAnchor
+});
+
+//for loop to make pins on each location and bing popup images and titles
 function jsonFunc(data) {
     
     for (var i = 0; i < data.length; i++) {
         console.log(data[i].position);
         var pos = data[i].position;
-        L.marker(pos).addTo(mymap).bindPopup(
+        L.marker(pos, {icon: brownIcon}).addTo(mymap).bindPopup(
         '<div class="popup">'+data[i].name+'</div>' +
         '<div class="popup"><img src="' + data[i].img + '"/></div>');
     }
 };
 
-
-        
+// data for map
 var mapData = [
     //{"name": "someone", "position": [50.0, 0.0], "img": 'xxxxxx.jpg'},
     
@@ -62,13 +75,15 @@ var mapData = [
     },
         {
         "name": "Effra river exit",
-        "position": ["51.4871", "-0.1259"],
+        "position": ["51.4870", "-0.1259"],
         "img": 'data/effraExit.jpg'
     },
 ];
 
 jsonFunc(mapData);
 
+
+//values for polyline on map
 var line_points1 = [
     [51.487512, -0.125635],
     [51.485815, -0.121965],
@@ -113,10 +128,9 @@ var line_points1 = [
     
 ];
 
+//polyline colour
 var polyline_options = {
     color: "#0a456a"
 };
 
 var polyline = L.polyline(line_points1, polyline_options).addTo(mymap);
-
-
